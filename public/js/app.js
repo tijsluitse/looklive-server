@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     $('.product').first().addClass('product-active');
     $(".product-indicator[data-uuid='"+$('.product').first().data('uuid')+"']").addClass('product-indicator-active');
 
@@ -9,4 +10,5 @@ $(document).ready(function(){
         $('.product.product-active').removeClass('product-active');
         $(".product[data-uuid='"+id+"']").addClass('product-active');
     });
+    
 });

@@ -64,36 +64,36 @@ nav li a:hover {
     color: #d84a4a;
 }
 
-.feed-items {
+.feedItems {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.feed-item {
+.feedItem {
     width: 300px;
     height: 600px;
     margin: .5em;
 }
 
-.feed-item img {
+.feedItem img {
     max-width: 100%;
     display: inline-block;
 }
 
-.appearance {
+.singleProduct {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.appearance-right, 
-.appearance-left {
+.productsInImage, 
+.productImage {
     width: 50%;
 }
 
-.appearance-right img, 
-.appearance-right h2 {
+.productsInImage img, 
+.productsInImage h2 {
     display: inline-block;
 }
 
@@ -106,30 +106,30 @@ nav li a:hover {
     border-radius: 50%;
 }
 
-.feed-item h2, 
-.appearance h2 {
+.feedItem h2, 
+.singleProduct h2 {
     margin-bottom: .5em;
     display: inline-block;
 }
 
-.feed-item h1,
-.appearance h2 {
+.feedItem h1,
+.singleProduct h2 {
     margin-top: 0;
     font-size: 21px;
 }
 
-.appearance-left {
+.productImage {
     width: 400px;
     height: 600px;
     margin-right: 2em;
     position: relative;
 }
 
-.appearance-left img {
+.productImage img {
     width: 100%;
 }
 
-.product-indicator {
+.productIndicator {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -138,11 +138,11 @@ nav li a:hover {
     border-radius: 50%;
 }
 
-.product-indicator.product-indicator-active {
+.productIndicator.productIndicator-active {
     background-color: #b4da55;
 }
 
-.appearance-products-inner {
+.productsInImageView-inner {
     width: 400px;
     position: relative;
     overflow: hidden;
@@ -162,7 +162,7 @@ nav li a:hover {
     transform: translateX(-100%);
 }
 
-.appearance-products h1 {
+.productsInImageView h1 {
     font-size: 21px;
     color: #333;
     padding-bottom: .5em;

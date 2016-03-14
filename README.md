@@ -53,9 +53,6 @@ The API returns JSON (for now).
 - Streaming API 
 - Read offline button for users
 
-##How to use the Service Worker
-- 
-
 ##What is a progressive web app?
 "A Progressive Web App uses modern web capabilities to deliver an app-like user experience. They evolve from pages in browser tabs to immersive, top-level apps, leveraging the web's low friction."
 
@@ -71,3 +68,6 @@ The API returns JSON (for now).
 - Linkable - Easily share via URL and not require complex installation.
 
 Source: [Google Developers](https://developers.google.com/web/progressive-web-apps)
+
+![Afbeelding](https://addyosmani.com/assets/getting-started-pwa/pwa-general-ff-@1x.jpg)
+

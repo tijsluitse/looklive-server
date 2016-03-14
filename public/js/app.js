@@ -73,7 +73,7 @@
         init();
 
         if (window.location.pathname === '/') {
-            feed();
+            // feed();
         }
 
         // Credit: Robert van Steen

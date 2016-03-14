@@ -54,11 +54,20 @@ The API returns JSON (for now).
 - Read offline button for users
 
 ##Before & After Service worker Caching
+
+![Before SW](images/sw-before.jpg)
+
 ###Before
 - DomContentLoad: 593ms
 - Firstpaint: 630ms
 - Load event: 2.10s
 
+![Before SW](images/sw-after.jpg)
+
+###After 
+- DomContentLoad: 360ms
+- Firstpaint: 418ms
+- Load event: 1.73s 
 
 ##What is a progressive web app?
 "A Progressive Web App uses modern web capabilities to deliver an app-like user experience. They evolve from pages in browser tabs to immersive, top-level apps, leveraging the web's low friction."
@@ -76,5 +85,5 @@ The API returns JSON (for now).
 
 Source: [Google Developers](https://developers.google.com/web/progressive-web-apps)
 
-![Afbeelding](https://addyosmani.com/assets/getting-started-pwa/pwa-general-ff-@1x.jpg)
+![Progressive Web App](https://addyosmani.com/assets/getting-started-pwa/pwa-general-ff-@1x.jpg)
 

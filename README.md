@@ -50,7 +50,7 @@ The API returns JSON (for now).
 - First paint: 1.62s
 - Load event: 15.01s
 
-![First Load Ever](images/first-load-ever.png)
+![First Load Ever](http://github.com/tijsluitse/looklive-server/first-load-ever.png)
 
 ##Optimized the HTML & CSS 
 

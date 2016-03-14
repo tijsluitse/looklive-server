@@ -53,6 +53,13 @@ The API returns JSON (for now).
 - Streaming API 
 - Read offline button for users
 
+##Before & After Service worker Caching
+###Before
+- DomContentLoad: 593ms
+- Firstpaint: 630ms
+- Load event: 2.10s
+
+
 ##What is a progressive web app?
 "A Progressive Web App uses modern web capabilities to deliver an app-like user experience. They evolve from pages in browser tabs to immersive, top-level apps, leveraging the web's low friction."
 

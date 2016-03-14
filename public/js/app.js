@@ -1,3 +1,4 @@
+/* Code thanks to Dennis van Bennekom */
 (function() {
     function init() {
         var links = document.querySelectorAll('a[data-url]');

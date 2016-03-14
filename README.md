@@ -42,3 +42,30 @@ appearance id.
 product id.
 
 The API returns JSON (for now).
+
+#Exercises
+
+##Functionalities
+- Don't render everything in JS - async render
+- Inline first css styles
+- Improve first render when in mean time api request is done
+- Using cache - Service worker
+- Streaming API 
+- Read offline button for users
+
+##How to use the Service Worker
+- 
+
+##What is a progressive web app?
+"A Progressive Web App uses modern web capabilities to deliver an app-like user experience. They evolve from pages in browser tabs to immersive, top-level apps, leveraging the web's low friction." - https://developers.google.com/web/progressive-web-apps
+
+- Progressive - Work for every user, regardless of browser choice because they’re built with progressive enhancement as a core tenet.
+- Responsive - Fit any form factor: desktop, mobile, tablet, or whatever is next.
+- Connectivity independent - Enhanced with service workers to work offline or on low quality networks.
+- App-like - Feel like an app to the user with app-style interactions and navigation because it's built on the app shell model.
+- Fresh - Always up-to-date thanks to the service worker update process.
+- Safe - Served via HTTPS to prevent snooping and ensure content hasn’t been tampered with.
+- Discoverable - Are identifiable as “applications” thanks to W3C manifests and service worker registration scope allowing search engines to find them.
+- Re-engageable - Make re-engagement easy through features like push notifications.
+- Installable - Allow users to “keep” apps they find most useful on their home screen without the hassle of an app store.
+- Linkable - Easily share via URL and not require complex installation.

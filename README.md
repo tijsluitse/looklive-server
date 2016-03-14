@@ -50,7 +50,7 @@ The API returns JSON (for now).
 - First paint: 1.62s
 - Load event: 15.01s
 
-![First Load Ever](http://tijsluitse.com/first-load-ever.png)
+![First Load Ever](http://tijsluitse.com/images/first-load-ever.png)
 
 ##Optimized the HTML & CSS 
 

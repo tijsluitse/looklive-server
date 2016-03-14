@@ -57,7 +57,7 @@ The API returns JSON (for now).
 - 
 
 ##What is a progressive web app?
-"A Progressive Web App uses modern web capabilities to deliver an app-like user experience. They evolve from pages in browser tabs to immersive, top-level apps, leveraging the web's low friction." - https://developers.google.com/web/progressive-web-apps
+"A Progressive Web App uses modern web capabilities to deliver an app-like user experience. They evolve from pages in browser tabs to immersive, top-level apps, leveraging the web's low friction."
 
 - Progressive - Work for every user, regardless of browser choice because they’re built with progressive enhancement as a core tenet.
 - Responsive - Fit any form factor: desktop, mobile, tablet, or whatever is next.
@@ -69,3 +69,5 @@ The API returns JSON (for now).
 - Re-engageable - Make re-engagement easy through features like push notifications.
 - Installable - Allow users to “keep” apps they find most useful on their home screen without the hassle of an app store.
 - Linkable - Easily share via URL and not require complex installation.
+
+Source: [Google Developers](https://developers.google.com/web/progressive-web-apps)

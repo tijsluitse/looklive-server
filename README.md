@@ -45,7 +45,7 @@ The API returns JSON (for now).
 
 #Exercises
 
-##Functionalities
+###Functionalities
 - Don't render everything in JS - async render
 - Inline first css styles
 - Improve first render when in mean time api request is done

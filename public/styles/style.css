@@ -1,8 +1,12 @@
+/* BODY */ 
+
 body {
     font: 14px Raleway, Helvetica, Arial, sans-serif;
     background-color: #f1f1f1;
     margin: 0;
 }
+
+/* ELEMENTS */ 
 
 h1, h2 {
     font-size: 16px;
@@ -15,6 +19,8 @@ a {
 main {
     padding: 50px;
 }
+
+/* NAV */ 
 
 nav {
     background-color: #252525;
@@ -64,6 +70,8 @@ nav li a:hover {
     color: #d84a4a;
 }
 
+/* FEED */
+
 .feedItems {
     display: flex;
     flex-direction: row;
@@ -80,6 +88,8 @@ nav li a:hover {
     max-width: 100%;
     display: inline-block;
 }
+
+/* PRODUCT */
 
 .singleProduct {
     display: flex;
@@ -154,12 +164,12 @@ nav li a:hover {
     max-width: 100%;
     position: absolute;
     top: 0;
-    left: 100%;
-    transition: transform .3s;
+    transform: translateX(0);
+    transition: transform .5s;
 }
 
 .product.product-active {
-    transform: translateX(-100%);
+    transform: translateX(100%);
 }
 
 .productsInImageView h1 {

@@ -122,4 +122,27 @@ The API returns JSON (for now).
 
 ![First Load Ever](images/single-page.png)
 
+##Conclusion
+
+After doing all the adjustments can be seen that the application has definitely become faster. But because the testing has been done in an environment having a non-constant internet connection, the results are different each time I refresh the page. Finally I can say that in the DOMContentLoaded, the first paint and the load event won some time. And time is very precious. 
+
+###First time
+- DOMContentLoaded: 1.53s
+- First paint: 1.62s
+- Load event: 15.01s
+
+###After improvements
+- DOMContentLoaded: 1.03s
+- First paint: 167ms
+- Load event: 10.18s
+
+
+
+
+
+
+
+
+
+
 

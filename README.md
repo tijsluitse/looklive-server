@@ -42,3 +42,7 @@ Source: [Google Developers](https://developers.google.com/web/progressive-web-ap
 
 ![Progressive Web App](https://addyosmani.com/assets/getting-started-pwa/pwa-general-ff-@1x.jpg)
 
+##Install Looklive on a online server
+
+Link: [Looklive - Tijs Luitse](https://ubuntu.tijsluitse.com)
+

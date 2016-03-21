@@ -36,7 +36,7 @@ var svgConfig = {
 };
 
 gulp.task('images', function() {
-  	return gulp.src('src/images/**/*')
+  	return gulp.src('./public/images/*')
     	.pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
     	.pipe(gulp.dest('./public/images/compressed'));
 });

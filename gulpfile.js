@@ -1,12 +1,5 @@
 var gulp = require('gulp'),
-    svgSprite = require('gulp-svg-sprite'),
-    uglify = require('gulp-uglify');
- 
-gulp.task('compress', function() {
-  return gulp.src('public/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('dist'));
-});
+    svgSprite = require('gulp-svg-sprite');
 
 var svgConfig = {
     dest: '.',

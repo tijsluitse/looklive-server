@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.3",
     "gulp-concat": "^2.6.0",
     "gulp-svg-sprite": "^1.2.19",
     "gulp-uglify": "^1.5.3"

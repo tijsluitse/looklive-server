@@ -70,6 +70,50 @@ nav li a:hover {
     color: #d84a4a;
 }
 
+/* SPRITE */
+
+.menu-sprite {
+   background-image: url("../images/spritesheet.png");
+   background-repeat: no-repeat;
+   display: inline-block;
+}
+
+.brands {
+   width: 31px;
+   height: 25px;
+   background-position: -5px -5px;
+}
+
+.home {
+   width: 29px;
+   height: 25px;
+   background-position: -46px -5px;
+}
+
+.latest {
+   width: 24px;
+   height: 26px;
+   background-position: -5px -40px;
+}
+
+.music {
+   width: 25px;
+   height: 25px;
+   background-position: -39px -40px;
+}
+
+.people {
+   width: 28px;
+   height: 25px;
+   background-position: -85px -5px;
+}
+
+.shows {
+   width: 31px;
+   height: 25px;
+   background-position: -74px -40px;
+}
+
 /* FEED */
 
 .feedItems {

@@ -34,7 +34,7 @@ var svgConfig = {
 };
 
 gulp.task('icons', function () {
-    gulp.src('./public//icons/svg/*.svg')
+    gulp.src('./public/icons/svg/*.svg')
         .pipe(svgSprite(svgConfig))
         .pipe(gulp.dest('./public/icons/sprite/'));
 });

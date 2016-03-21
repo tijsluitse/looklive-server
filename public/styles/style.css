@@ -72,6 +72,10 @@ nav li a:hover {
 
 /* SPRITE */
 
+.menu-sprite {
+    position: relative;
+}
+
 .icn-brands {
     background: url("/icons/sprite/sprite-02980601.svg") 0 0 no-repeat;
     width: 17px;

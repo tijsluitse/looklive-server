@@ -74,6 +74,9 @@ nav li a:hover {
 
 .menu-sprite {
     position: relative;
+    display: inline-block;
+    margin-right: 7px;
+    top: 2px;
 }
 
 .icn-brands {

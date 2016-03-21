@@ -72,46 +72,35 @@ nav li a:hover {
 
 /* SPRITE */
 
-.menu-sprite {
-   background-image: url("../images/spritesheet.png");
-   background-repeat: no-repeat;
-   display: inline-block;
+.icn-brands {
+    background: url("/icons/sprite/sprite-02980601.svg") 0 0 no-repeat;
+    width: 17px;
+    height: 17px;
 }
-
-.brands {
-   width: 31px;
-   height: 25px;
-   background-position: -5px -5px;
+.icn-home {
+    background: url("/icons/sprite/sprite-02980601.svg") 50% 0 no-repeat;
+    width: 17px;
+    height: 15.09px;
 }
-
-.home {
-   width: 29px;
-   height: 25px;
-   background-position: -46px -5px;
+.icn-latest {
+    background: url("/icons/sprite/sprite-02980601.svg") 0 100% no-repeat;
+    width: 15.8px;
+    height: 17px;
 }
-
-.latest {
-   width: 24px;
-   height: 26px;
-   background-position: -5px -40px;
+.icn-music {
+    background: url("/icons/sprite/sprite-02980601.svg") 46.470588235294116% 100% no-repeat;
+    width: 17px;
+    height: 17px;
 }
-
-.music {
-   width: 25px;
-   height: 25px;
-   background-position: -39px -40px;
+.icn-people {
+    background: url("/icons/sprite/sprite-02980601.svg") 100% 0 no-repeat;
+    width: 17px;
+    height: 15.33px;
 }
-
-.people {
-   width: 28px;
-   height: 25px;
-   background-position: -85px -5px;
-}
-
-.shows {
-   width: 31px;
-   height: 25px;
-   background-position: -74px -40px;
+.icn-shows {
+    background: url("/icons/sprite/sprite-02980601.svg") 100% 78.53483606557377% no-repeat;
+    width: 17px;
+    height: 14.48px;
 }
 
 /* FEED */

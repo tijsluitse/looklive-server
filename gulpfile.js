@@ -1,5 +1,13 @@
 var gulp = require('gulp'),
-    svgSprite = require('gulp-svg-sprite');
+    svgSprite = require('gulp-svg-sprite'),
+    concat = require('gulp-concat');
+
+// Concatenate JS Files
+gulp.task('scripts', function() {
+    return gulp.src('./public/js/*.js')
+      .pipe(concat('main-concat.js'))
+      .pipe(gulp.dest('./public/js'));
+});
 
 var svgConfig = {
     dest: '.',

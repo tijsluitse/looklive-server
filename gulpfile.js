@@ -38,3 +38,5 @@ gulp.task('icons', function () {
         .pipe(svgSprite(svgConfig))
         .pipe(gulp.dest('./public/icons/sprite/'));
 });
+
+gulp.task('default', ['scripts', 'icons']);

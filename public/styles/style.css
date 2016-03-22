@@ -1,10 +1,25 @@
+@font-face {
+    font-family: 'Raleway Normal';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Raleway Bold';
+    src: url('../fonts/Raleway-SemiBold.ttf');
+}
+
 /* BODY */ 
 
 body {
-    font: 14px Raleway, Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
     font-weight: 600;
     background-color: #f1f1f1;
     margin: 0;
+}
+
+body.fonts-loaded {
+    font-family: 'Raleway Normal';
 }
 
 /* HEADER */
@@ -23,6 +38,7 @@ header img {
 /* ELEMENTS */ 
 
 h1, h2 {
+    font-family: 'Raleway Bold';
     font-size: 18px;
     font-weight: 600;
 }

@@ -15,33 +15,38 @@ I have chosen to use Gulp, not only because I am a beginner and want to use a "s
 Source: [Hongkiat](http://www.hongkiat.com/blog/gulp-vs-grunt/)
 
 #HTTP Requests
-The amount of http request at the start of this final exercise was: 
-Now there are 165 http requests. 
+The amount of http request at the start of this final exercise was: 170. Now there are 165 http requests, so we won 5 requests! 
 
 To reduce this amount I have created a sprite SVG for all icons, I have minified the CSS and JS files and optimized all images. Besides that I have created a fontface observer to check if the font is loaded.
 
-##Sprite SVG - Gulp 
-- Dom: 344ms
-- Frame: 407ms
+##Sprite SVG
+- DOMLoadedContent: 344ms
+- First Paint: 407ms
 - Loadevent: 1.10s
 
-##Minified CSS & JS 
-- 277ms
-- 317ms
-- 1.43s
+![Sprite SVG](readme-images/gvsg.jpg)
 
-#Optimaliseer content images
+##Minified CSS & JS 
+- DOMLoadedContent: 277ms
+- First Paint: 317ms
+- Loadevent: 1.43s
+
+![Minified CSS & JS](readme-images/minified-css-js.jpg)
 
 ##Compress images
-- Dom: 291ms
-- Frame: 343ms
+- DOMLoadedContent: 291ms
+- First Paint: 343ms
 - Loadevent: 1.52s
 
-#Webfonts
+![Images Compress](readme-images/images-compress.jpg)
 
-First all the Raleway font types were loaded in. But we only use the regular (400) and the bold (600) font-weight. In the Looklive project all language is English, therefore I replaced the link to a subset of Raleway.
+##Webfonts
+- DOMLoadedContent: 401ms
+- First Paint: 559ms
+- Loadevent: 1.32s
 
-```<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700,800,900,500,300,200,100' rel='stylesheet' type='text/css'>```
+![Webfont](readme-images/webfont.jpg)
 
-```<link href='https://fonts.googleapis.com/css?family=Raleway&subset=greek' rel='stylesheet' type='text/css'>```
+#Conclusion
+Unfortunately, the overall timeline is not becoming increasingly shorter. That is still dependent on the Internet and that has no fixed value. Well, you see that there are five fewer requests that the matter anyway. Working with Gulp I find very useful, normally I work with a processor Prepos, but it actually works much easier.
 

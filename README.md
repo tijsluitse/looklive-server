@@ -26,5 +26,5 @@ First all the Raleway font types were loaded in. But we only use the regular (40
 
 ```<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700,800,900,500,300,200,100' rel='stylesheet' type='text/css'>```
 
-```<link href='https://fonts.googleapis.com/css?family=Raleway&subset=english:400,600' rel='stylesheet' type='text/css'>```
+```<link href='https://fonts.googleapis.com/css?family=Raleway&subset=greek' rel='stylesheet' type='text/css'>```
 

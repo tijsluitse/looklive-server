@@ -47,10 +47,26 @@ gulp.task('cssmin', function () {
         .pipe(gulp.dest('./public/dist/styles'));
 });
 
-gulp.task('critical', function () {
-    return gulp.src('./public/*.html')
-        .pipe(critical({base: 'dist/', inline: true, css: ['./dist/styles/style.min.css']}))
-        .pipe(gulp.dest('./public/dist/critical'));
+gulp.task('critical', function (cb) {
+  critical.generate({
+    base: '_site/',
+    src: 'index.html',
+    css: ['./public/dist/styles/style.min.css'],
+    dimensions: [{
+      width: 320,
+      height: 480
+    },{
+      width: 768,
+      height: 1024
+    },{
+      width: 1280,
+      height: 960
+    }],
+    dest: './public/dist/critical/critical.css',
+    minify: true,
+    extract: false,
+    ignore: ['font-face']
+  });
 });
 
 gulp.task('images', function() {

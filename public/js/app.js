@@ -1,10 +1,7 @@
 /* Special thanks to Dennis van Bennekom for providing me with this code */
 
+'use strict'
 
-/*
- * jQuery specifieke code omgezet naar vanilla javascript zodat de jQuery
- * library niet in hoeft geladen te worden. Dit scheelt een stuk in laadtijd.
-**/
 (function() {
     function init() {
         var links = document.querySelectorAll('a[data-url]');
@@ -34,15 +31,16 @@
     }
 
     function loadPage(url, href) {
-        var wrapper = document.querySelector('main');
-
-        fetch(url)
-            .then(response => response.text())
-            .then(text => {
-                wrapper.innerHTML = text;
-                ready();
-            });
-    }
+       var wrapper = document.querySelector('main');
+       fetch(url)
+       .then(function(response) {
+           return response.text;
+       })
+       .then(function(text) {
+           wrapper.innerHTML = text;
+           return ready();
+       });
+   }
 
     function appearance() {
         // Appearance page

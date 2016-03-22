@@ -1,15 +1,7 @@
 var gulp = require('gulp'),
+    jshint = require('gulp-jshint'),
     svgSprite = require('gulp-svg-sprite'),
-    concat = require('gulp-concat'),
-    imagemin = require('gulp-imagemin'),
-	cache = require('gulp-cache');
-
-// Concatenate JS Files
-gulp.task('scripts', function() {
-    return gulp.src('./public/js/*.js')
-      	.pipe(concat('main-concat.js'))
-      	.pipe(gulp.dest('./public/js'));
-});
+    imagemin = require('gulp-imagemin');
 
 var svgConfig = {
     dest: '.',
@@ -35,6 +27,12 @@ var svgConfig = {
     }
 };
 
+gulp.task('lint', function() {
+  return gulp.src('./public/js/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('YOUR_REPORTER_HERE'));
+});
+
 gulp.task('images', function() {
   	return gulp.src('./public/images/*')
     	.pipe(cache(imagemin({ optimizationLevel: 1, progressive: true, interlaced: true })))
@@ -47,4 +45,13 @@ gulp.task('icons', function () {
         .pipe(gulp.dest('./public/icons/sprite/'));
 });
 
-gulp.task('default', ['scripts', 'images', 'icons']);
+gulp.task('watch', function() {
+   // Watch .js files
+  gulp.watch('./public/js/*.js', ['scripts']);
+   // Watch .css files
+  gulp.watch('./public/styles/*.css', ['sass']);
+   // Watch image files
+  gulp.watch('./public/images/*', ['images']);
+ });
+
+gulp.task('default', ['lint', 'images', 'icons', 'watch']);

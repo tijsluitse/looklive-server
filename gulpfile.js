@@ -1,7 +1,11 @@
 var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     svgSprite = require('gulp-svg-sprite'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    cache = require('gulp-cache'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename');
 
 var svgConfig = {
     dest: '.',
@@ -27,17 +31,19 @@ var svgConfig = {
     }
 };
 
-gulp.task('lint', function() {
-  return gulp.src('./public/js/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('YOUR_REPORTER_HERE'));
+gulp.task('scripts', function() {
+    return gulp.src('./public/js/*.js')
+      .pipe(concat('main.min.js'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest('./public/dist/js'));
 });
 
-gulp.task('images', function() {
-  	return gulp.src('./public/images/*')
-    	.pipe(cache(imagemin({ optimizationLevel: 1, progressive: true, interlaced: true })))
-    	.pipe(gulp.dest('./public/images/compressed'));
-});
+// gulp.task('images', function() {
+//   	return gulp.src('./public/images/*')
+//     	.pipe(cache(imagemin({ optimizationLevel: 1, progressive: true, interlaced: true })))
+//     	.pipe(gulp.dest('./public/images/compressed'));
+// });
 
 gulp.task('icons', function () {
     gulp.src('./public/icons/svg/*.svg')
@@ -46,12 +52,12 @@ gulp.task('icons', function () {
 });
 
 gulp.task('watch', function() {
-   // Watch .js files
-  gulp.watch('./public/js/*.js', ['scripts']);
-   // Watch .css files
-  gulp.watch('./public/styles/*.css', ['sass']);
-   // Watch image files
-  gulp.watch('./public/images/*', ['images']);
- });
+    // Watch .js files
+    gulp.watch('./public/js/*.js', ['scripts']);
+    // Watch .css files
+    gulp.watch('./public/styles/*.css', ['css']);
+    // Watch image files
+    gulp.watch('./public/images/*', ['images']);
+});
 
-gulp.task('default', ['lint', 'images', 'icons', 'watch']);
+gulp.task('default', ['scripts', 'icons', 'watch']);

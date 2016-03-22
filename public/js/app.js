@@ -46,21 +46,21 @@
 
         products[0].classList.add('product-active');
 
-        var firstIndicator = document.querySelector('.product-indicator[data-uuid="' + products[0].dataset.uuid + '"]');
+        var firstIndicator = document.querySelector('.productIndicator[data-uuid="' + products[0].dataset.uuid + '"]');
 
-        firstIndicator.classList.add('product-indicator-active');
+        firstIndicator.classList.add('productIndicator-active');
 
-        var indicators = document.querySelectorAll('.product-indicator');
+        var indicators = document.querySelectorAll('.productIndicator');
 
         [].forEach.call(indicators, function(indicator) {
             indicator.addEventListener('click', function(event) {
                 var id = event.target.dataset.uuid;
 
-                var currentIndicatorActive = document.querySelector('.product-indicator-active');
-                currentIndicatorActive.classList.remove('product-indicator-active');
+                var currentIndicatorActive = document.querySelector('.productIndicator-active');
+                currentIndicatorActive.classList.remove('productIndicator-active');
 
                 var newIndicatorActive = event.target;
-                newIndicatorActive.classList.add('product-indicator-active');
+                newIndicatorActive.classList.add('productIndicator-active');
 
                 var currentActive = document.querySelector('.product-active');
                 currentActive.classList.remove('product-active');

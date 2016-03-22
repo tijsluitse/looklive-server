@@ -1,3 +1,13 @@
+#Gulp or Grunt?
+
+![Gulp vs Grunt](readme-images/gvsg.jpg)
+
+There are two main differences between Grunt and Gulp
+- Grunt focuses on configuration, while Gulp focuses on code
+- Grunt was built around a set of built-in, and commonly used tasks, while Gulp came around with the idea of enforcing nothing, but how community-developed micro-tasks should connect to each other
+
+
+
 #HTTP Requests
 - Uglify (minify JS)
 - Minify CSS

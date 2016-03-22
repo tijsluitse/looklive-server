@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    cssmin = require('gulp-cssmin');
 
 var svgConfig = {
     dest: '.',
@@ -31,12 +32,19 @@ var svgConfig = {
     }
 };
 
-gulp.task('scripts', function() {
+gulp.task('jsmin', function() {
     return gulp.src('./public/js/*.js')
       .pipe(concat('main.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest('./public/dist/js'));
+});
+
+gulp.task('cssmin', function () {
+    gulp.src('./public/styles/*.css')
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('./public/dist/styles'));
 });
 
 // gulp.task('images', function() {
@@ -60,4 +68,4 @@ gulp.task('watch', function() {
     gulp.watch('./public/images/*', ['images']);
 });
 
-gulp.task('default', ['scripts', 'icons', 'watch']);
+gulp.task('default', ['jsmin', 'cssmin', 'icons', 'watch']);

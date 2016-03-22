@@ -29,16 +29,24 @@
     }
 
     function loadPage(url, href) {
-       var wrapper = document.querySelector('main');
-       fetch(url)
-       .then(function(response) {
-           return response.text;
-       })
-       .then(function(text) {
-           wrapper.innerHTML = text;
-           return ready();
-       });
-   }
+        var wrapper = document.querySelector('main');
+        fetch(url)
+        .then(function(response) {
+            return response.text;
+        })
+        .then(function(text) {
+            wrapper.innerHTML = text;
+            return ready();
+        });
+    }
+
+    var observer = new FontFaceObserver('Raleway');
+
+    observer.check('Raleway').then(function () {
+        document.body.className += 'fonts-loaded';
+    }, function () {
+        console.log('Font is not available');
+    });
 
     function appearance() {
         // Appearance page

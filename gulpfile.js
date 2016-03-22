@@ -5,8 +5,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
-    cssmin = require('gulp-cssmin'),
-    critical = require('critical').stream;
+    cssmin = require('gulp-cssmin');
 
 var svgConfig = {
     dest: '.',
@@ -47,28 +46,6 @@ gulp.task('cssmin', function () {
         .pipe(gulp.dest('./public/dist/styles'));
 });
 
-gulp.task('critical', function (cb) { //src: http://fourkitchens.com/blog/article/use-gulp-automate-your-critical-path-css
-    critical.generate({
-        base: './',
-        src: 'public/*.html',
-        css: ['./public/dist/styles/style.min.css'],
-        dimensions: [{
-            width: 320,
-            height: 480
-    }, {
-            width: 768,
-            height: 1024
-    }, {
-            width: 1280,
-            height: 960
-    }],
-        dest: './public/dist/styles/critical.css',
-        minify: true,
-        extract: false
-        //ignore: ['font-face']
-    });
-});
-
 gulp.task('images', function() {
   	return gulp.src('./public/images/*')
     	.pipe(cache(imagemin({ optimizationLevel: 6, progressive: true, interlaced: true })))
@@ -87,6 +64,6 @@ gulp.task('watch', function() {
     gulp.watch('./public/images/*', ['images']);
 });
 
-gulp.task('default', ['watch', 'jsmin', 'critical', 'images', 'cssmin', 'icons']);
+gulp.task('default', ['watch', 'jsmin', 'images', 'cssmin', 'icons']);
 
 

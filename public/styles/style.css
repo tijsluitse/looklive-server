@@ -7,6 +7,19 @@ body {
     margin: 0;
 }
 
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 50vh;
+    max-height: 56vw;
+    overflow: hidden;
+}
+
+header img {
+    width: 100%;
+}
+
 /* ELEMENTS */ 
 
 h1, h2 {

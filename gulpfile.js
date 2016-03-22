@@ -47,11 +47,11 @@ gulp.task('cssmin', function () {
         .pipe(gulp.dest('./public/dist/styles'));
 });
 
-// gulp.task('images', function() {
-//   	return gulp.src('./public/images/*')
-//     	.pipe(cache(imagemin({ optimizationLevel: 1, progressive: true, interlaced: true })))
-//     	.pipe(gulp.dest('./public/images/compressed'));
-// });
+gulp.task('images', function() {
+  	return gulp.src('./public/images/*')
+    	.pipe(cache(imagemin({ optimizationLevel: 1, progressive: true, interlaced: true })))
+    	.pipe(gulp.dest('./public/images/compressed'));
+});
 
 gulp.task('icons', function () {
     gulp.src('./public/icons/svg/*.svg')
@@ -68,4 +68,4 @@ gulp.task('watch', function() {
     gulp.watch('./public/images/*', ['images']);
 });
 
-gulp.task('default', ['jsmin', 'cssmin', 'icons', 'watch']);
+gulp.task('default', ['jsmin', 'images', 'cssmin', 'icons', 'watch']);

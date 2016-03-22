@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
-    cssmin = require('gulp-cssmin');
+    cssmin = require('gulp-cssmin'),
+    critical = require('critical').stream;
 
 var svgConfig = {
     dest: '.',
@@ -46,6 +47,12 @@ gulp.task('cssmin', function () {
         .pipe(gulp.dest('./public/dist/styles'));
 });
 
+gulp.task('critical', function () {
+    return gulp.src('./public/*.html')
+        .pipe(critical({base: 'dist/', inline: true, css: ['./dist/styles/style.min.css']}))
+        .pipe(gulp.dest('./public/dist/critical'));
+});
+
 gulp.task('images', function() {
   	return gulp.src('./public/images/*')
     	.pipe(cache(imagemin({ optimizationLevel: 6, progressive: true, interlaced: true })))
@@ -64,6 +71,6 @@ gulp.task('watch', function() {
     gulp.watch('./public/images/*', ['images']);
 });
 
-gulp.task('default', ['watch', 'jsmin', 'images', 'cssmin', 'icons']);
+gulp.task('default', ['watch', 'jsmin', 'critical', 'images', 'cssmin', 'icons']);
 
 

@@ -47,26 +47,26 @@ gulp.task('cssmin', function () {
         .pipe(gulp.dest('./public/dist/styles'));
 });
 
-gulp.task('critical', function (cb) {
-  critical.generate({
-    base: '_site/',
-    src: 'index.html',
-    css: ['./public/dist/styles/style.min.css'],
-    dimensions: [{
-      width: 320,
-      height: 480
-    },{
-      width: 768,
-      height: 1024
-    },{
-      width: 1280,
-      height: 960
+gulp.task('critical', function (cb) { //src: http://fourkitchens.com/blog/article/use-gulp-automate-your-critical-path-css
+    critical.generate({
+        base: './',
+        src: 'public/*.html',
+        css: ['./public/dist/styles/style.min.css'],
+        dimensions: [{
+            width: 320,
+            height: 480
+    }, {
+            width: 768,
+            height: 1024
+    }, {
+            width: 1280,
+            height: 960
     }],
-    dest: './public/dist/critical/critical.css',
-    minify: true,
-    extract: false,
-    ignore: ['font-face']
-  });
+        dest: './public/dist/styles/critical.css',
+        minify: true,
+        extract: false
+        //ignore: ['font-face']
+    });
 });
 
 gulp.task('images', function() {

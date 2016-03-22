@@ -12,9 +12,9 @@
                 height: 50vh;
                 max-height: 56vw;
                 overflow: hidden;
-                background-image: url(../images/compressed/header.jpg);
+                /*background-image: url(../images/compressed/header.jpg);
                 background-size: cover;
-                background-position: top;
+                background-position: top;*/
             }
     
         </style>
@@ -33,7 +33,9 @@
             </ul>
         </nav>
 
-        <header></header>
+        <header>
+            <img src="/images/compressed/header_small.jpg" srcset="/images/compressed/header_medium.jpg 1000w, /images/compressed/header_large.jpg 2000w" alt="yah">
+        </header>
 
         <main>
             {{{body}}}

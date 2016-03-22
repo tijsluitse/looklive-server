@@ -38,6 +38,8 @@
 - Installable - Allow users to “keep” apps they find most useful on their home screen without the hassle of an app store.
 - Linkable - Easily share via URL and not require complex installation.
 
+Tijs: "What means that a progressive web application behaves and feels like an app, but uses modern browser technologies. Think of one page apps with geolocation, localstorage or caching. With progressive enhanchement you can create very nice user experiences, always responsible. For modern browsers it's easy but always think minimal first, create everything PE. So that every usercase has a fallback." 
+
 Source: [Google Developers](https://developers.google.com/web/progressive-web-apps)
 
 ![Progressive Web App](https://addyosmani.com/assets/getting-started-pwa/pwa-general-ff-@1x.jpg)

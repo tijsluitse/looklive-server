@@ -1,8 +1,6 @@
 /* Special thanks to Dennis van Bennekom for providing me with this code */
 
 (function() {
-    'use strict';
-    
     function init() {
         var links = document.querySelectorAll('a[data-url]');
 

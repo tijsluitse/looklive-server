@@ -68,4 +68,4 @@ gulp.task('watch', function() {
     gulp.watch('./public/images/*', ['images']);
 });
 
-gulp.task('default', ['jsmin', 'images', 'cssmin', 'icons', 'watch']);
+gulp.task('default', ['watch', 'jsmin', 'images', 'cssmin', 'icons']);

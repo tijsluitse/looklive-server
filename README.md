@@ -14,7 +14,11 @@
 - Loadevent: 1.52s
 
 ##Minified CSS & JS 
-- 452ms
-- 468ms
-- 1.87s
+- 277ms
+- 317ms
+- 1.43s
+
+#Optimaliseer content images
+
+#Webfonts
 

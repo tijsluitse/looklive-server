@@ -48,7 +48,7 @@ gulp.task('cssmin', function () {
 
 gulp.task('images', function() {
   	return gulp.src('./public/images/*')
-    	.pipe(cache(imagemin({ optimizationLevel: 1, progressive: true, interlaced: true })))
+    	.pipe(cache(imagemin({ optimizationLevel: 6, progressive: true, interlaced: true })))
     	.pipe(gulp.dest('./public/images/compressed'));
 });
 
@@ -59,12 +59,11 @@ gulp.task('icons', function () {
 });
 
 gulp.task('watch', function() {
-    // Watch .js files
     gulp.watch('./public/js/*.js', ['scripts']);
-    // Watch .css files
     gulp.watch('./public/styles/*.css', ['css']);
-    // Watch image files
     gulp.watch('./public/images/*', ['images']);
 });
 
 gulp.task('default', ['watch', 'jsmin', 'images', 'cssmin', 'icons']);
+
+

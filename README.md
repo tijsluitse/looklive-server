@@ -7,3 +7,8 @@
 - Dom: 344ms
 - Frame: 407ms
 - Loadevent: 1.10s
+
+##Minimize images
+- Dom: 344ms
+- Frame: 407ms
+- Loadevent: 1.10s

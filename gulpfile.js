@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    jshint = require('gulp-jshint'),
     svgSprite = require('gulp-svg-sprite'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),

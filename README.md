@@ -24,6 +24,8 @@ To reduce this amount I have created a sprite SVG for all icons, I have minified
 - First Paint: 407ms
 - Loadevent: 1.10s
 
+![Sprite](readme-images/sprite.jpg)
+
 ##Minified CSS & JS 
 - DOMLoadedContent: 277ms
 - First Paint: 317ms

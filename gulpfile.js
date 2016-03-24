@@ -6,6 +6,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     cssmin = require('gulp-cssmin');
+    browserSync = require('browser-sync').create(),
+    reload      = browserSync.reload;
 
 var svgConfig = {
     dest: '.',
@@ -48,7 +50,7 @@ gulp.task('cssmin', function () {
 
 gulp.task('images', function() {
   	return gulp.src('./public/images/*')
-    	.pipe(cache(imagemin({ optimizationLevel: 6, progressive: true, interlaced: true })))
+    	.pipe(cache(imagemin({ optimizationLevel: 6, progressive: true, interlaced: true }))) // plugin kennis > wat gebeurd er met cache
     	.pipe(gulp.dest('./public/images/compressed'));
 });
 
@@ -59,11 +61,8 @@ gulp.task('icons', function () {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('./public/js/*.js', ['scripts']);
-    gulp.watch('./public/styles/*.css', ['css']);
-    gulp.watch('./public/images/*', ['images']);
+    gulp.watch('./public/js/*.js', ['jsmin', reload]);
+    gulp.watch('./public/styles/*.css', ['cssmin', reload]);
 });
 
-gulp.task('default', ['watch', 'jsmin', 'images', 'cssmin', 'icons']);
-
-
+gulp.task('default', ['watch', 'jsmin', 'cssmin', 'images', 'icons']);

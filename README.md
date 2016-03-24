@@ -55,7 +55,7 @@ The latest results are great. When I now reload my page the results show that be
 - First paint: 1.62s
 - Load event: 15.01s
 
-![First paint](readme-images/firt-paint-ever.jpg)
+![First paint](readme-images/first-paint-ever.jpg)
 
 ##Last paint with performance updates:
 - DOMLoadedContent: 219ms

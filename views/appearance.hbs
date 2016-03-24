@@ -3,7 +3,7 @@
     <article class="productImage">
         <img src="{{ item.image.url }}">
         {{#each item.product_occurrences}}
-            <div class="productIndicator" style="top: {{position.y}}%; left: {{position.x}}%;" data-uuid="{{product.id}}"></div>
+        <div class="productIndicator" style="top: {{position.y}}%; left: {{position.x}}%;" data-uuid="{{product.id}}"></div>
         {{/each}}
     </article>
 
@@ -16,30 +16,30 @@
             <h1>Products</h1>
             <div class="productsInImageView-inner">
                 {{#each products}}
-                    <div class="product" data-uuid="{{id}}">
-                        <div id="actual">
-                            <div class="image">
-                                <h1>Actual</h1>
-                                <img src="{{image.url}}">
-                            </div>
-                            <div class="info">
-                                <h1>{{ name }}</h1>
-                                <h2>{{ brand.name }}</h2>
-                            </div>
+                <div class="product" data-uuid="{{id}}">
+                    <div id="actual">
+                        <div class="image">
+                            <h1>Actual</h1>
+                            <img src="{{image.url}}">
                         </div>
-                        {{#each similars}}
-                            <div class="similar">
-                                <div class="image">
-                                    <h1>{{ similar_type }}</h1>
-                                    <img src="{{image.url}}">
-                                </div>
-                                <div class="info">
-                                    <h1>{{ name }}</h1>
-                                    <h2>{{ brand.name }}</h2>
-                                </div>
-                            </div>
-                        {{/each}}
+                        <div class="info">
+                            <h1>{{ name }}</h1>
+                            <h2>{{ brand.name }}</h2>
+                        </div>
                     </div>
+                    {{#each similars}}
+                    <div class="similar">
+                        <div class="image">
+                            <h1>{{ similar_type }}</h1>
+                            <img src="{{image.url}}">
+                        </div>
+                        <div class="info">
+                            <h1>{{ name }}</h1>
+                            <h2>{{ brand.name }}</h2>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
                 {{/each}}
             </div>
         </section>

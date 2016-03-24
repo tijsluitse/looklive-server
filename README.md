@@ -46,5 +46,33 @@ To reduce this amount I have created a sprite SVG for all icons, I have minified
 ![Webfont](readme-images/webfont.jpg)
 
 #Conclusion
-Unfortunately, the overall timeline is not becoming increasingly shorter. That is still dependent on the Internet and that has no fixed value. Well, you see that there are five fewer requests that the matter anyway. Working with Gulp I find very useful, normally I work with a processor Prepos, but it actually works much easier.
+The latest results are great. When I now reload my page the results show that because of all the performance improvements, we lost seconds in loading time! Here are the final results:
+
+##First paint:
+- DOMContentLoaded: 1.53s
+- First paint: 1.62s
+- Load event: 15.01s
+
+![First paint](readme-images/firt-paint-ever.jpg)
+
+##Last paint with performance updates:
+- DOMLoadedContent: 219ms
+- First Paint: 244ms
+- Loadevent: 873ms
+
+![Last paint](readme-images/last-paint.jpg)
+
+##Seconds won:
+- DOMLoadedContent: 1.31s faster
+- First Paint: 1.37s faster
+- Loadevent: 14.1s faster
+
+It's amazing what updating your performance can do. So be aware of this in all your future projects. 
+
+
+
+
+
+
+
 

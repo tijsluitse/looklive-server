@@ -1,3 +1,4 @@
+// Special thanks to Dennis for this code snippets 
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');

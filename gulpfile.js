@@ -1,13 +1,13 @@
-var gulp = require('gulp'),
-    svgSprite = require('gulp-svg-sprite'),
-    imagemin = require('gulp-imagemin'),
-    cache = require('gulp-cache'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-    cssmin = require('gulp-cssmin');
-    browserSync = require('browser-sync').create(),
-    reload      = browserSync.reload;
+var gulp            = require('gulp'),
+    svgSprite       = require('gulp-svg-sprite'),
+    imagemin        = require('gulp-imagemin'),
+    pngquant        = require('imagemin-pngquant'),
+    concat          = require('gulp-concat'),
+    uglify          = require('gulp-uglify'),
+    rename          = require('gulp-rename'),
+    cssmin          = require('gulp-cssmin');
+    browserSync     = require('browser-sync').create(),
+    reload          = browserSync.reload;
 
 var svgConfig = {
     dest: '.',
@@ -48,13 +48,17 @@ gulp.task('cssmin', function () {
         .pipe(gulp.dest('./public/dist/styles'));
 });
 
-gulp.task('images', function() {
-  	return gulp.src('./public/images/*')
-    	.pipe(cache(imagemin({ optimizationLevel: 6, progressive: true, interlaced: true }))) // plugin kennis > wat gebeurd er met cache
-    	.pipe(gulp.dest('./public/images/compressed'));
+gulp.task('imgopt', function() {
+    gulp.src('./public/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('./public/images/compressed/'));
 });
 
-gulp.task('icons', function () {
+gulp.task('iconsprite', function () {
     gulp.src('./public/icons/svg/*.svg')
         .pipe(svgSprite(svgConfig))
         .pipe(gulp.dest('./public/icons/sprite/'));
@@ -65,4 +69,4 @@ gulp.task('watch', function() {
     gulp.watch('./public/styles/*.css', ['cssmin', reload]);
 });
 
-gulp.task('default', ['watch', 'jsmin', 'cssmin', 'images', 'icons']);
+gulp.task('default', ['jsmin', 'cssmin', 'imgopt', 'iconsprite', 'watch']);
